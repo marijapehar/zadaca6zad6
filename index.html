@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>Zbrajanje brojeva</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            text-align: center;
+        }
+        input {
+            margin: 5px;
+            padding: 8px;
+            font-size: 16px;
+            width: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Zadatak 6: Zbrajanje dva broja</h2>
+
+    <form onsubmit="zbroji(event)">
+        X = <input type="number" id="x" required>
+        Y = <input type="number" id="y" required>
+        <button type="submit">Zbroji</button>
+    </form>
+
+    <p>REZULTAT = <input type="text" id="rezultat" readonly></p>
+
+    <script>
+        function zbroji(event) {
+            event.preventDefault();
+            const x = parseFloat(document.getElementById("x").value);
+            const y = parseFloat(document.getElementById("y").value);
+            const suma = x + y;
+            document.getElementById("rezultat").value = suma;
+        }
+    </script>
+
+</body>
+</html>
